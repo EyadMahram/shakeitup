@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { QamariyaCorner, QamariyaBorder, QamariyaDivider, ArchMotif } from "@/components/YemeniMotifs";
 
-const categories = ["Starters", "Mains", "Desserts", "Drinks"] as const;
+const categories = ["Smoothies", "Shakes", "Fruitbowls", "Sandwiches"] as const;
 type Category = (typeof categories)[number];
 
 interface MenuItem {
@@ -14,29 +14,29 @@ interface MenuItem {
 }
 
 const menuData: Record<Category, MenuItem[]> = {
-  Starters: [
-    { name: "Saltah Soup",          description: "Traditional fenugreek stew, slow-braised lamb, fresh hilbeh foam, zhoug drizzle", price: "18", tag: "Signature" },
-    { name: "Mutabbaq",             description: "Crispy layered pastry, spiced minced lamb, spring onions, eggs, turmeric",        price: "16" },
-    { name: "Haradah",              description: "Fire-roasted tomato and chili relish, toasted cumin, warm khobz flatbread",       price: "12" },
-    { name: "Bint Al-Sahn Starter", description: "Warm pull-apart dough, wildflower honey, black seed, clarified butter",          price: "14" },
+  Smoothies: [
+    { name: "Mango Kardemom",    description: "Verse mango, banaan, kardemom, kokosmelk, honing",                           price: "7.50", tag: "Bestseller" },
+    { name: "Green Revival",     description: "Spinazie, groene appel, verse munt, gember, citroensap",                    price: "7.00" },
+    { name: "Strawberry Rose",   description: "Aardbei, framboos, rozenwater, dadelstroop, limoen",                        price: "7.50", tag: "Nieuw" },
+    { name: "Turmeric Sunrise",  description: "Ananas, sinaasappel, kurkuma, gember, zwarte peper, honing",                price: "7.00" },
   ],
-  Mains: [
-    { name: "Lamb Mandi",        description: "Pit-smoked whole lamb, fragrant basmati rice, Yemeni hawayej spice blend, raisins",   price: "52", tag: "Chef's Choice" },
-    { name: "Chicken Zurbian",   description: "Saffron-spiced layered rice, braised free-range chicken, caramelized onions, pine nuts", price: "38" },
-    { name: "Haneeth",           description: "Slow-roasted lamb shoulder, turmeric potatoes, garden greens, fresh zhoug sauce",    price: "46" },
-    { name: "Aseed with Lamb",   description: "Silky barley porridge, slow-braised lamb stew, clarified butter, cumin-scented broth", price: "34" },
+  Shakes: [
+    { name: "Pistachio Honey",   description: "Pistachepasta, banaan, wildflower honing, vanille, amandelmelk",            price: "8.50", tag: "Signature" },
+    { name: "Date & Tahini",     description: "Medjool dadels, tahini, amandelmelk, kaneel, een snuf zout",                price: "8.50" },
+    { name: "Salted Caramel",    description: "Banaan, karamel, zeezout, havermelk, vanille-extract",                      price: "8.00" },
+    { name: "Berry Blast",       description: "Gemengde bessen, Griekse yoghurt, honing, vanille",                         price: "7.50" },
   ],
-  Desserts: [
-    { name: "Bint Al-Sahn", description: "Layered honey cake, Sidr wildflower honey, black seed, warm clarified butter",            price: "16", tag: "Showpiece" },
-    { name: "Hareeseh",     description: "Semolina cake, date honey syrup, toasted almond, orange blossom water",                   price: "14" },
-    { name: "Asida",        description: "Traditional sweet porridge, aged date molasses, clarified butter, cinnamon dust",         price: "12" },
-    { name: "Sambosa",      description: "Crispy fried pastry pockets, sweet spiced cheese, cardamom honey dip",                    price: "13" },
+  Fruitbowls: [
+    { name: "Sunrise Bowl",      description: "Mango, papaja, ananas, verse munt, granaatappelpitjes, granola, honing",    price: "10.50", tag: "Signature" },
+    { name: "Berry & Date Bowl", description: "Bosbes, aardbei, medjool dadels, amandelschaafsel, honingdressing",         price: "10.00" },
+    { name: "Tropical Green",    description: "Kiwi, groene appel, spinaziebase, kokosflakes, chiazaad, limoen",           price: "9.50" },
+    { name: "Acai Levant",       description: "Acaibasis, banaan, vijg, sesamgranola, dadelstroop, granaatappel",          price: "11.00", tag: "Nieuw" },
   ],
-  Drinks: [
-    { name: "Qishr — Saba Blend", description: "Yemeni coffee-husk brew, fresh ginger, cardamom, cinnamon, honey",                 price: "9",  tag: "House Special" },
-    { name: "Chai Karak",         description: "Spiced loose-leaf tea, saffron, cardamom, rose water, condensed milk",              price: "8" },
-    { name: "Tamarind Cooler",    description: "House-made tamarind concentrate, fresh ginger, wildflower honey, sparkling water",  price: "10" },
-    { name: "Naqia",              description: "Chilled spring water infused with lemon verbena, fresh mint, and dried lime",       price: "7" },
+  Sandwiches: [
+    { name: "Za'atar Chicken",   description: "Gegrilde kip, za'atar spread, labneh, rucola, sesambrood",                  price: "9.50", tag: "Bestseller" },
+    { name: "Falafel & Hummus",  description: "Krokante falafel, romige hummus, ingelegde groenten, tahini, pita",         price: "8.50" },
+    { name: "Halloumi & Peper",  description: "Gegrilde halloumi, geroosterde rode peper, sumac-ui, harissa, zuurdesem",  price: "9.00" },
+    { name: "Shakshuka Wrap",    description: "Gekruide tomatenei, feta, verse kruiden, chilipasta, warm flatbread",       price: "8.50", tag: "Nieuw" },
   ],
 };
 
@@ -83,8 +83,8 @@ const MenuSection = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <p className="text-xs tracking-[0.4em] uppercase text-primary mb-4">From the Ancient Kingdom</p>
-          <h2 className="font-display text-4xl sm:text-5xl tracking-wider mb-6">Our Menu</h2>
+          <p className="text-xs tracking-[0.4em] uppercase text-primary mb-4">Vers Bereid, Elke Dag</p>
+          <h2 className="font-display text-4xl sm:text-5xl tracking-wider mb-6">Ons Menu</h2>
           <QamariyaDivider />
         </motion.div>
 
@@ -125,7 +125,7 @@ const MenuSection = () => {
                 <div className="flex items-center justify-between mb-8 relative">
                   <div>
                     <p className="text-[10px] tracking-[0.3em] uppercase text-muted-foreground mb-1">
-                      Chapter {pageIndex + 1}
+                      Categorie {pageIndex + 1}
                     </p>
                     <h3 className="font-display text-3xl sm:text-4xl tracking-wider gold-gradient-text">
                       {active}
@@ -136,7 +136,7 @@ const MenuSection = () => {
                   </div>
                 </div>
 
-                {/* Yemeni geometric border divider */}
+                {/* Geometric border divider */}
                 <QamariyaBorder className="mb-8" />
 
                 {/* Menu items */}
@@ -168,7 +168,7 @@ const MenuSection = () => {
                       <div className="hidden sm:flex flex-1 items-end pb-1 mx-2">
                         <div className="w-full border-b border-dotted border-border/40" />
                       </div>
-                      <span className="font-display text-lg text-primary shrink-0">${item.price}</span>
+                      <span className="font-display text-lg text-primary shrink-0">€{item.price}</span>
                     </motion.div>
                   ))}
                 </div>
@@ -177,7 +177,7 @@ const MenuSection = () => {
                 <QamariyaBorder className="mt-8 mb-4" />
                 <div className="flex justify-center">
                   <span className="text-xs text-muted-foreground/50 tracking-[0.3em] font-display italic">
-                    — {pageIndex + 1} of {categories.length} —
+                    — {pageIndex + 1} van {categories.length} —
                   </span>
                 </div>
               </motion.div>
@@ -189,7 +189,7 @@ const MenuSection = () => {
             onClick={prev}
             disabled={pageIndex === 0}
             className="absolute left-0 sm:-left-16 top-1/2 -translate-y-1/2 z-20 w-10 h-10 flex items-center justify-center text-muted-foreground hover:text-primary disabled:opacity-20 disabled:cursor-not-allowed transition-all duration-300"
-            aria-label="Previous page"
+            aria-label="Vorige pagina"
           >
             <ChevronLeft size={24} />
           </button>
@@ -197,7 +197,7 @@ const MenuSection = () => {
             onClick={next}
             disabled={pageIndex === categories.length - 1}
             className="absolute right-0 sm:-right-16 top-1/2 -translate-y-1/2 z-20 w-10 h-10 flex items-center justify-center text-muted-foreground hover:text-primary disabled:opacity-20 disabled:cursor-not-allowed transition-all duration-300"
-            aria-label="Next page"
+            aria-label="Volgende pagina"
           >
             <ChevronRight size={24} />
           </button>

@@ -9,13 +9,13 @@ import img6 from "@/assets/Screenshot 2026-03-01 145022.png";
 import img7 from "@/assets/Screenshot 2026-03-01 145035.png";
 
 const images = [
-  { src: img1, alt: "Gallery image 1", caption: "" },
-  { src: img2, alt: "Gallery image 2", caption: "" },
-  { src: img3, alt: "Gallery image 3", caption: "" },
-  { src: img4, alt: "Gallery image 4", caption: "" },
-  { src: img5, alt: "Gallery image 5", caption: "" },
-  { src: img6, alt: "Gallery image 6", caption: "" },
-  { src: img7, alt: "Gallery image 7", caption: "" },
+  { src: img1, alt: "Verse smoothies bij Shake It Up", caption: "Smoothies" },
+  { src: img2, alt: "Handgemaakte shakes", caption: "Shakes" },
+  { src: img3, alt: "Kleurrijke fruitbowls", caption: "Fruitbowls" },
+  { src: img4, alt: "Midden-oosterse sandwiches", caption: "Sandwiches" },
+  { src: img5, alt: "Verse ingrediënten", caption: "Ingrediënten" },
+  { src: img6, alt: "Onze kaart", caption: "Menu" },
+  { src: img7, alt: "Shake It Up Zaandam", caption: "De Zaak" },
 ];
 
 const GallerySection = () => {
@@ -31,8 +31,8 @@ const GallerySection = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <p className="text-xs tracking-[0.4em] uppercase text-primary mb-4">A Visual Journey</p>
-          <h2 className="font-display text-4xl sm:text-5xl tracking-wider mb-6">The Flavours of Saba</h2>
+          <p className="text-xs tracking-[0.4em] uppercase text-primary mb-4">Een Visuele Kennismaking</p>
+          <h2 className="font-display text-4xl sm:text-5xl tracking-wider mb-6">De Smaken van Shake It Up</h2>
           <div className="gold-line mx-auto" />
         </motion.div>
 

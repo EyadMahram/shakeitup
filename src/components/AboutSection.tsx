@@ -3,9 +3,9 @@ import { QamariyaDivider, QamariyaBorder, QamariyaStar } from "@/components/Yeme
 import heroImg from "@/assets/Screenshot 2026-03-01 144004.png";
 
 const pillars = [
-  { title: "Our Heritage",   body: "Rooted in the ancient Kingdom of Saba, our recipes are passed down through generations — unchanged, uncompromised, and full of soul." },
-  { title: "Our Craft",      body: "Every dish is built on time-honoured technique: slow-smoked meats, hand-ground spice blends, and doughs kneaded by hand each morning." },
-  { title: "Our Hospitality", body: "In Yemen, a guest is a gift. We welcome every table with the warmth and generosity that has defined our culture for thousands of years." },
+  { title: "Vers",         body: "Alles wordt ter plekke bereid. Geen pakjes, geen kunstmatige toevoegingen. Wat je krijgt is puur natuur — zo zoals het hoort." },
+  { title: "Puur",         body: "Wij werken met eerlijke ingrediënten van topkwaliteit. Van rijpe mango's tot verse kruiden en ambachtelijke midden-oosterse specerijen." },
+  { title: "Verrassend",   body: "Verwacht meer dan alleen een smoothie. Onze combinaties zijn uniek, gedurfd en altijd met een midden-oosters tintje dat je verrast." },
 ];
 
 const AboutSection = () => {
@@ -24,8 +24,8 @@ const AboutSection = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <p className="text-xs tracking-[0.4em] uppercase text-primary mb-4">Who We Are</p>
-          <h2 className="font-display text-4xl sm:text-5xl tracking-wider mb-6">About Us</h2>
+          <p className="text-xs tracking-[0.4em] uppercase text-primary mb-4">Wie Wij Zijn</p>
+          <h2 className="font-display text-4xl sm:text-5xl tracking-wider mb-6">Over Ons</h2>
           <QamariyaDivider />
         </motion.div>
 
@@ -42,7 +42,7 @@ const AboutSection = () => {
             <div className="relative overflow-hidden aspect-[4/5]">
               <img
                 src={heroImg}
-                alt="Old City of Sana'a — ancient Yemeni architecture"
+                alt="Shake It Up — vers bereide shakes en smoothies"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
@@ -59,17 +59,16 @@ const AboutSection = () => {
             transition={{ duration: 0.9, delay: 0.1 }}
             className="flex flex-col justify-center"
           >
-            <p className="arabic-text text-3xl text-primary/40 mb-4 tracking-widest">مطعم سبأ</p>
             <h3 className="font-display text-3xl sm:text-4xl tracking-wider mb-6 leading-snug">
-              A Table Rooted in<br />
-              <span className="gold-gradient-text">Ancient Yemen</span>
+              Bij Shake It Up draait<br />
+              <span className="gold-gradient-text">alles om vers</span>
             </h3>
             <div className="space-y-5 text-muted-foreground font-light leading-relaxed text-sm sm:text-base">
               <p>
-                Saba Restaurant was born from a deep love for Yemeni cuisine — one of the Arab world's oldest and most distinctive culinary traditions. Named after the legendary Kingdom of Saba (Sheba), we carry that ancient legacy into every plate we serve.
+                Shake It Up is jouw plek voor verse shakes, smoothies, fruitbowls en sandwiches in Zaandam. Geen kunstmatige toevoegingen, geen kant-en-klare mengsels — alles wordt ter plekke gemaakt met de allerbeste ingrediënten.
               </p>
               <p>
-                Our kitchen draws on the rich diversity of Yemen's regions: the fragrant rice dishes of Hadramawt, the bold stews of the highlands, the honey-drenched sweets of Sana'a's old city. We cook the way our grandmothers did — with patience, spice, and love.
+                Onze inspiratie komt uit de rijke midden-oosterse keuken. Denk aan za'atar, tahini, medjool dadels, kardemom en rozenwater — verwerkt in frisse, verrassende combinaties die je nergens anders vindt.
               </p>
             </div>
 
@@ -80,9 +79,9 @@ const AboutSection = () => {
             {/* Stat strip */}
             <div className="grid grid-cols-3 gap-6 mt-8">
               {[
-                { value: "1,000+", label: "Years of heritage" },
-                { value: "30+",    label: "Yemeni recipes" },
-                { value: "100%",   label: "Authentic spices" },
+                { value: "100%", label: "Vers bereid" },
+                { value: "0",    label: "Kunstmatige toevoegingen" },
+                { value: "∞",    label: "Combinaties mogelijk" },
               ].map((s) => (
                 <div key={s.label} className="text-center">
                   <p className="font-display text-2xl gold-gradient-text mb-1">{s.value}</p>

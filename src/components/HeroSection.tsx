@@ -10,7 +10,7 @@ const HeroSection = () => {
       <div className="absolute inset-0">
         <img
           src={heroImg}
-          alt="Old City of Sana'a, Yemen — UNESCO World Heritage Site"
+          alt="Shake It Up — vers, puur en verrassend"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/65" />
@@ -30,18 +30,18 @@ const HeroSection = () => {
           transition={{ duration: 1, delay: 0.3 }}
         >
           <QamariyaDivider className="mb-8" />
-          <p className="arabic-text text-2xl sm:text-3xl text-primary/50 mb-2 tracking-widest">
-            مطعم سبأ
+          <p className="font-body text-sm sm:text-base text-primary/70 mb-2 tracking-[0.4em] uppercase">
+            Zaandam
           </p>
           <h1 className="font-display text-5xl sm:text-7xl lg:text-8xl tracking-wider mb-6 gold-gradient-text">
-            SABA
+            SHAKE IT UP
           </h1>
           <p className="font-body text-lg sm:text-xl text-white/90 tracking-[0.3em] uppercase mb-4">
-            Authentic Yemeni Cuisine
+            Vers. Puur. Verrassend.
           </p>
           <QamariyaDivider className="mt-8 mb-10" />
           <p className="font-body text-base text-white/75 max-w-lg mx-auto leading-relaxed font-light">
-            A celebration of Yemen's ancient culinary heritage. From the highlands of Sana'a to the shores of Aden — every dish tells a story carried across centuries.
+            Geen kunstmatige toevoegingen. Alleen ter plekke bereide shakes, smoothies, fruitbowls en sandwiches — met de beste midden-oosterse ingrediënten.
           </p>
         </motion.div>
 
