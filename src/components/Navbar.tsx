@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import logoImg from "@/assets/Screenshot 2026-03-01 145035.png";
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -31,9 +32,8 @@ const Navbar = () => {
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
-          <a href="#" className="font-display text-2xl tracking-wider gold-gradient-text flex flex-col leading-tight">
-            <span>SABA</span>
-            <span className="text-xs tracking-widest text-primary/60 arabic-text">مطعم سبأ</span>
+          <a href="#">
+            <img src={logoImg} alt="Shake It Up" className="h-12 w-auto object-contain" />
           </a>
 
           <div className="hidden md:flex items-center gap-10">
