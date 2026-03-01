@@ -18,7 +18,7 @@ const AboutSection = () => {
       <div className="max-w-6xl mx-auto">
         {/* Section heading */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 80 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false }}
           transition={{ duration: 0.8 }}
@@ -33,7 +33,7 @@ const AboutSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-20">
           {/* Image */}
           <motion.div
-            initial={{ opacity: 0, x: -40 }}
+            initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: false }}
             transition={{ duration: 0.9 }}
@@ -53,7 +53,7 @@ const AboutSection = () => {
 
           {/* Text */}
           <motion.div
-            initial={{ opacity: 0, x: 40 }}
+            initial={{ opacity: 0, x: 100 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: false }}
             transition={{ duration: 0.9, delay: 0.1 }}
@@ -97,7 +97,7 @@ const AboutSection = () => {
           {pillars.map((pillar, i) => (
             <motion.div
               key={pillar.title}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 80 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false }}
               transition={{ duration: 0.7, delay: i * 0.15 }}

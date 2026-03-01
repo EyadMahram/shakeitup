@@ -28,7 +28,7 @@ const ReservationSection = () => {
     <section id="reservations" className="py-28 px-6">
       <div className="max-w-3xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 80 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false }}
           transition={{ duration: 0.8 }}
@@ -41,7 +41,7 @@ const ReservationSection = () => {
 
         <motion.form
           onSubmit={handleSubmit}
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 80 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false }}
           transition={{ duration: 0.8, delay: 0.2 }}

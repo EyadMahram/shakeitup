@@ -77,7 +77,7 @@ const MenuSection = () => {
     <section id="menu" className="py-28 px-6">
       <div className="max-w-5xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 80 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false }}
           transition={{ duration: 0.8 }}
@@ -144,7 +144,7 @@ const MenuSection = () => {
                   {items.map((item, i) => (
                     <motion.div
                       key={item.name}
-                      initial={{ opacity: 0, y: 12 }}
+                      initial={{ opacity: 0, y: 40 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.2 + i * 0.08 }}
                       className="group flex items-start justify-between gap-4"
