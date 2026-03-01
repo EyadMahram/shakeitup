@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
-import heroImg from "@/assets/hero-restaurant.jpg";
+import heroImg from "@/assets/Screenshot 2026-03-01 144219.png";
 import { QamariyaDivider, QamariyaStar } from "@/components/YemeniMotifs";
 
 const HeroSection = () => {

@@ -1,19 +1,21 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import dish1 from "@/assets/dish-1.jpg";
-import dish2 from "@/assets/dish-2.jpg";
-import dish3 from "@/assets/dish-3.jpg";
-import dish4 from "@/assets/dish-4.jpg";
-import dish5 from "@/assets/dish-5.jpg";
-import dish6 from "@/assets/dish-6.jpg";
+import img1 from "@/assets/Screenshot 2026-03-01 144004.png";
+import img2 from "@/assets/Screenshot 2026-03-01 144026.png";
+import img3 from "@/assets/Screenshot 2026-03-01 144123.png";
+import img4 from "@/assets/Screenshot 2026-03-01 144156.png";
+import img5 from "@/assets/Screenshot 2026-03-01 145007.png";
+import img6 from "@/assets/Screenshot 2026-03-01 145022.png";
+import img7 from "@/assets/Screenshot 2026-03-01 145035.png";
 
 const images = [
-  { src: dish1, alt: "Kabsa — fragrant rice with spiced lamb, a classic Arabic centrepiece", caption: "Kabsa" },
-  { src: dish2, alt: "Mansaf — slow-cooked lamb in fermented yoghurt sauce on flatbread", caption: "Mansaf" },
-  { src: dish3, alt: "Falafel — crispy fried chickpea patties with herbs and sesame tahini", caption: "Falafel" },
-  { src: dish4, alt: "Kunafa — crispy shredded pastry soaked in rose-water syrup with sweet cheese", caption: "Kunafa" },
-  { src: dish5, alt: "Baklava — layers of flaky pastry, pistachios and honey syrup", caption: "Baklava" },
-  { src: dish6, alt: "Shawarma — slow-roasted spiced meat served with garlic sauce and flatbread", caption: "Shawarma" },
+  { src: img1, alt: "Gallery image 1", caption: "" },
+  { src: img2, alt: "Gallery image 2", caption: "" },
+  { src: img3, alt: "Gallery image 3", caption: "" },
+  { src: img4, alt: "Gallery image 4", caption: "" },
+  { src: img5, alt: "Gallery image 5", caption: "" },
+  { src: img6, alt: "Gallery image 6", caption: "" },
+  { src: img7, alt: "Gallery image 7", caption: "" },
 ];
 
 const GallerySection = () => {
