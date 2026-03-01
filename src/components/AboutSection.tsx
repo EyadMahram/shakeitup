@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { QamariyaDivider, QamariyaBorder, QamariyaStar } from "@/components/YemeniMotifs";
-import heroImg from "@/assets/hero-restaurant.jpg";
+import heroImg from "@/assets/Screenshot 2026-03-01 144004.png";
 
 const pillars = [
   { title: "Our Heritage",   body: "Rooted in the ancient Kingdom of Saba, our recipes are passed down through generations — unchanged, uncompromised, and full of soul." },
