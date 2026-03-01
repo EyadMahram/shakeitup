@@ -20,7 +20,7 @@ const AboutSection = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
@@ -35,7 +35,7 @@ const AboutSection = () => {
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
             transition={{ duration: 0.9 }}
             className="relative"
           >
@@ -55,7 +55,7 @@ const AboutSection = () => {
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
             transition={{ duration: 0.9, delay: 0.1 }}
             className="flex flex-col justify-center"
           >
@@ -99,7 +99,7 @@ const AboutSection = () => {
               key={pillar.title}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
               transition={{ duration: 0.7, delay: i * 0.15 }}
               className="glass-card p-8 hover-glow text-center flex flex-col items-center gap-4"
             >
